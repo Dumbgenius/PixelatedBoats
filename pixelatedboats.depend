@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1466894598 source:c:\code\cpp\pixelatedboats\main.cpp
+1466960753 source:c:\code\cpp\pixelatedboats\main.cpp
 	<SFML/Graphics.hpp>
-	"src/TestGame.hpp"
-	"engine/BaseGame.hpp"
-	"engine/GameState.hpp"
+	"TestGame.h"
+	"BaseGame.h"
+	"GameState.h"
 
 1466804429 c:\sfml-2.3.2\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -383,9 +383,9 @@
 	<string>
 	<vector>
 
-1466879961 source:c:\code\cpp\pixelatedboats\engine\basegame.cpp
-	"EGraphics.hpp"
-	"BaseGame.hpp"
+1466960753 source:c:\code\cpp\pixelatedboats\engine\basegame.cpp
+	"EGraphics.h"
+	"BaseGame.h"
 
 1466874739 c:\code\cpp\pixelatedboats\engine\egraphics.hpp
 	<SFML/Graphics.hpp>
@@ -398,20 +398,20 @@
 1466880885 c:\code\cpp\pixelatedboats\engine\gamestate.hpp
 	"BaseGame.hpp"
 
-1466874488 source:c:\code\cpp\pixelatedboats\engine\egraphics.cpp
-	"EGraphics.hpp"
+1466960753 source:c:\code\cpp\pixelatedboats\engine\egraphics.cpp
+	"EGraphics.h"
 
-1466880946 source:c:\code\cpp\pixelatedboats\engine\gamestate.cpp
-	"BaseGame.hpp"
-	"GameState.hpp"
+1466960753 source:c:\code\cpp\pixelatedboats\engine\gamestate.cpp
+	"BaseGame.h"
+	"GameState.h"
 
 1466881008 c:\code\cpp\pixelatedboats\src\testgame.hpp
 	<SFML/Graphics.hpp>
 	"../engine/BaseGame.hpp"
 
-1466881017 source:c:\code\cpp\pixelatedboats\src\testgame.cpp
-	"../engine/BaseGame.hpp"
-	"TestGame.hpp"
+1466960753 source:c:\code\cpp\pixelatedboats\src\testgame.cpp
+	"BaseGame.h"
+	"TestGame.h"
 
 1466959166 source:/hdd/jacob/Documents/dev/PixelatedBoats/engine/BaseGame.cpp
 	"EGraphics.h"
@@ -478,5 +478,36 @@
 	"BaseGame.h"
 
 1466959960 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/TextureList.cpp
+	"TextureList.h"
+
+1466960753 c:\code\cpp\pixelatedboats\engine\egraphics.h
+	<SFML/Graphics.hpp>
+
+1466960753 c:\code\cpp\pixelatedboats\engine\basegame.h
+	<SFML/Graphics.hpp>
+	"EGraphics.h"
+	"GameState.h"
+
+1466960753 c:\code\cpp\pixelatedboats\engine\gamestate.h
+	"BaseGame.h"
+
+1466960753 c:\code\cpp\pixelatedboats\include\testgame.h
+	<SFML/Graphics.hpp>
+	"BaseGame.h"
+
+1466960753 source:c:\code\cpp\pixelatedboats\src\playership.cpp
+	"PlayerShip.h"
+	"TextureList.h"
+
+1466960753 c:\code\cpp\pixelatedboats\include\playership.h
+	<SFML/Graphics.hpp>
+
+1466960753 c:\code\cpp\pixelatedboats\include\texturelist.h
+	<SFML/Graphics.hpp>
+	<array>
+	<map>
+	<string>
+
+1466960753 source:c:\code\cpp\pixelatedboats\src\texturelist.cpp
 	"TextureList.h"
 
