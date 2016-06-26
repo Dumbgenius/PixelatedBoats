@@ -15,9 +15,15 @@ class PlayerShip : GameObject
         void draw(sf::RenderTarget& target, sf::RenderStates states) const;
         void update();
         void move(float x, float y);
+        void move(float distance);
+        void rotate(float degrees);
+        sf::Vector2f getPosition();
     private:
-        int p_x;
-        int p_y;
+        float p_x;
+        float p_y;
+        float p_rotation;
+        float p_speed;
+        float p_rotateSpeed;
         sf::Sprite p_sprite;
 };
 

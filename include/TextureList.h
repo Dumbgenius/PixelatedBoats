@@ -19,7 +19,7 @@ class TextureList
 {
     public:
         TextureList();
-        const sf::Texture* getTexture(TextureID textureID);
+        sf::Texture* getTexture(TextureID textureID);
     private:
         std::array<sf::Texture, 1> textures;
         std::array<bool, 1> texturesLoaded;

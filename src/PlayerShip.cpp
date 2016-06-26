@@ -1,19 +1,34 @@
 #include "PlayerShip.h"
 #include "TextureList.h"
+#include <math.h>
+
+const float PI = 3.14159265;
 
 PlayerShip::PlayerShip(GameState* gameState) {
     p_x = 0;
     p_y = 0;
+    p_rotation = 0;
+    p_speed = 3;
+    p_rotateSpeed = 2;
+    textureList.getTexture(TextureID::shipPlayer)->setSmooth(true);
     p_sprite.setTexture(*textureList.getTexture(TextureID::shipPlayer));
     p_sprite.setPosition(p_x, p_y);
+    p_sprite.setRotation(p_rotation);
+    p_sprite.setOrigin(64,64);
     gameState->objectsList.insert(gameState->objectsList.end(), this);
 }
 
 PlayerShip::PlayerShip(GameState* gameState, float x, float y) {
     p_x = x;
     p_y = y;
+    p_rotation = 0;
+    p_speed = 3;
+    p_rotateSpeed = 2;
+    textureList.getTexture(TextureID::shipPlayer)->setSmooth(true);
     p_sprite.setTexture(*textureList.getTexture(TextureID::shipPlayer));
     p_sprite.setPosition(p_x, p_y);
+    p_sprite.setRotation(p_rotation);
+    p_sprite.setOrigin(64,64);
     gameState->objectsList.insert(gameState->objectsList.end(), this);
 }
 
@@ -27,21 +42,38 @@ void PlayerShip::move(float x, float y) {
     p_sprite.setPosition(p_x, p_y);
 }
 
+void PlayerShip::move(float distance) {
+    p_x -= sin(-p_rotation/(180/PI)) * distance;
+    p_y -= cos(-p_rotation/(180/PI)) * distance;
+    p_sprite.setPosition(p_x, p_y);
+}
+
+void PlayerShip::rotate(float degrees) {
+    p_sprite.rotate(degrees);
+    p_rotation = p_sprite.getRotation();
+}
+
 void PlayerShip::update() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        move(-1, 0);
+        rotate(-p_rotateSpeed);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        move(1, 0);
+        rotate(p_rotateSpeed);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        move(0, -1);
+        move(p_speed);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        move(0, 1);
+        move(-p_speed);
     }
 }
 
 void PlayerShip::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     target.draw(p_sprite, states);
 }
+
+sf::Vector2f PlayerShip::getPosition() {
+    return sf::Vector2f (p_x, p_y);
+}
+
+

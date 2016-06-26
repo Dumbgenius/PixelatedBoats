@@ -12,7 +12,7 @@ TextureList::TextureList()
     textureLocationByID[TextureID::shipPlayer] = "img/shipPlayer.png";
 }
 
-const sf::Texture* TextureList::getTexture(TextureID textureID) {
+sf::Texture* TextureList::getTexture(TextureID textureID) {
     if (!texturesLoaded[textureID]) {
         bool loadSucceeded = textureList.textures[textureID].loadFromFile(textureLocationByID[textureID]);
         if (!loadSucceeded) {
@@ -21,6 +21,6 @@ const sf::Texture* TextureList::getTexture(TextureID textureID) {
             std::cout<<"Successfully loaded texture\""<<textureLocationByID[textureID]<<"\".";
         }
     }
-    const sf::Texture *result = &(textureList.textures[textureID]);
-    return result;
+
+    return &(textureList.textures[textureID]);
 }

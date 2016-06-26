@@ -8,8 +8,13 @@
 class TestState : GameState {
 public:
     TestState(BaseGame *g) : GameState(g) {
-        new PlayerShip (this, 100, 100);
+        player = new PlayerShip (this, 100, 100);
+        view = game->getWindow()->getDefaultView();
     }
+
+    sf::View view;
+    PlayerShip* player;
+
     void update() {
         sf::RenderWindow *wind = game->getWindow();
         sf::Event ev;
@@ -27,6 +32,8 @@ public:
 
     void render() {
         sf::RenderWindow *wind = game->getWindow();
+        wind->setView(view);
+        view.setCenter(player->getPosition());
         wind->clear();
         for (unsigned int i=0; i<objectsList.size(); i++) {
             wind->draw(*objectsList[i]);
