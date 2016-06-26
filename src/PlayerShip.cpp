@@ -18,6 +18,13 @@ PlayerShip::~PlayerShip()
     //dtor
 }
 
+void PlayerShip::update() {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+        // left key is pressed: move ship
+        move(1, 0);
+    }
+}
+
 void PlayerShip::draw(sf::RenderTarget& target, sf::RenderStates states) {
 
 }

@@ -11,6 +11,8 @@ class PlayerShip : sf::Drawable
         PlayerShip(int x, int y);
         virtual ~PlayerShip();
         void draw(sf::RenderTarget& target, sf::RenderStates states);
+        void update();
+        void move();
     private:
         int p_x;
         int p_y;
