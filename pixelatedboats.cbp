@@ -108,10 +108,12 @@
 		<Unit filename="engine/EGraphics.h" />
 		<Unit filename="engine/GameState.cpp" />
 		<Unit filename="engine/GameState.h" />
+		<Unit filename="include/GameObject.h" />
 		<Unit filename="include/PlayerShip.h" />
 		<Unit filename="include/TestGame.h" />
 		<Unit filename="include/TextureList.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/GameObject.cpp" />
 		<Unit filename="src/PlayerShip.cpp" />
 		<Unit filename="src/TestGame.cpp" />
 		<Unit filename="src/TextureList.cpp" />
