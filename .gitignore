@@ -29,7 +29,6 @@
 
 #Code::Blocks files
 *.layout
-*.depend
 
 #Backup files
 *~
