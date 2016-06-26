@@ -435,12 +435,13 @@
 	"BaseGame.h"
 	"GameState.h"
 
-1466962029 source:/hdd/jacob/Documents/dev/PixelatedBoats/main.cpp
+1466963810 source:/hdd/jacob/Documents/dev/PixelatedBoats/main.cpp
 	<SFML/Graphics.hpp>
 	"TestGame.h"
 	"BaseGame.h"
 	"GameState.h"
 	"PlayerShip.h"
+	<iostream>
 
 1466956740 /hdd/jacob/Documents/dev/PixelatedBoats/src/TestGame.hpp
 	<SFML/Graphics.hpp>
@@ -450,12 +451,14 @@
 	"BaseGame.h"
 	"TestGame.h"
 
-1466961524 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/PlayerShip.cpp
+1466963746 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/PlayerShip.cpp
 	"PlayerShip.h"
 	"TextureList.h"
 
-1466961899 /hdd/jacob/Documents/dev/PixelatedBoats/include/PlayerShip.h
+1466963754 /hdd/jacob/Documents/dev/PixelatedBoats/include/PlayerShip.h
 	<SFML/Graphics.hpp>
+	"GameState.h"
+	"GameObject.h"
 
 1466960461 /hdd/jacob/Documents/dev/PixelatedBoats/include/TextureList.h
 	<SFML/Graphics.hpp>
@@ -471,15 +474,17 @@
 	"EGraphics.h"
 	"GameState.h"
 
-1466959170 /hdd/jacob/Documents/dev/PixelatedBoats/engine/GameState.h
-	"BaseGame.h"
+1466963527 /hdd/jacob/Documents/dev/PixelatedBoats/engine/GameState.h
+	<vector>
+	"GameObject.h"
 
 1466959165 /hdd/jacob/Documents/dev/PixelatedBoats/include/TestGame.h
 	<SFML/Graphics.hpp>
 	"BaseGame.h"
 
-1466960646 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/TextureList.cpp
+1466963122 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/TextureList.cpp
 	"TextureList.h"
+	<iostream>
 
 1466960753 c:\code\cpp\pixelatedboats\engine\egraphics.h
 	<SFML/Graphics.hpp>
@@ -511,4 +516,10 @@
 
 1466960753 source:c:\code\cpp\pixelatedboats\src\texturelist.cpp
 	"TextureList.h"
+
+1466963398 /hdd/jacob/Documents/dev/PixelatedBoats/include/GameObject.h
+	<SFML/Graphics.hpp>
+
+1466963451 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/GameObject.cpp
+	"GameObject.h"
 

@@ -1,26 +1,30 @@
 #include "PlayerShip.h"
 #include "TextureList.h"
 
-PlayerShip::PlayerShip()
-{
+PlayerShip::PlayerShip(GameState* gameState) {
+    p_x = 0;
+    p_y = 0;
     p_sprite.setTexture(*textureList.getTexture(TextureID::shipPlayer));
+    p_sprite.setPosition(p_x, p_y);
+    gameState->objectsList.insert(gameState->objectsList.end(), this);
 }
 
-PlayerShip::PlayerShip(int x, int y)
-{
+PlayerShip::PlayerShip(GameState* gameState, float x, float y) {
     p_x = x;
     p_y = y;
     p_sprite.setTexture(*textureList.getTexture(TextureID::shipPlayer));
+    p_sprite.setPosition(p_x, p_y);
+    gameState->objectsList.insert(gameState->objectsList.end(), this);
 }
 
-PlayerShip::~PlayerShip()
-{
+PlayerShip::~PlayerShip() {
     //dtor
 }
 
-void PlayerShip::move(int x, int y) {
+void PlayerShip::move(float x, float y) {
     p_x += x;
     p_y += y;
+    p_sprite.setPosition(p_x, p_y);
 }
 
 void PlayerShip::update() {
