@@ -18,11 +18,11 @@
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add library="sfml-graphics-d" />
-					<Add library="sfml-window-d" />
-					<Add library="sfml-audio-d" />
-					<Add library="sfml-network-d" />
-					<Add library="sfml-system-d" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-audio" />
+					<Add library="sfml-network" />
+					<Add library="sfml-system" />
 					<Add directory="C:/SFML-2.3.2/include" />
 					<Add directory="C:/SFML-2.3.2/lib" />
 				</Linker>
@@ -42,21 +42,23 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="winmm" />
-					<Add library="sfml-system-s" />
-					<Add library="opengl32" />
-					<Add library="gdi32" />
-					<Add library="sfml-window-s" />
+					<Add library="sfml-graphics-s" />
 					<Add library="freetype" />
 					<Add library="jpeg" />
-					<Add library="ws2_32" />
-					<Add library="sfml-network-s" />
+					<Add library="sfml-window-s" />
+					<Add library="opengl32" />
+					<Add library="gdi32" />
+					<Add library="sfml-audio-s" />
 					<Add library="openal32" />
 					<Add library="flac" />
 					<Add library="vorbisenc" />
 					<Add library="vorbisfile" />
 					<Add library="vorbis" />
 					<Add library="ogg" />
+					<Add library="sfml-network-s" />
+					<Add library="ws2_32" />
+					<Add library="sfml-system-s" />
+					<Add library="winmm" />
 					<Add directory="C:/SFML-2.3.2/include" />
 					<Add directory="C:/SFML-2.3.2/lib" />
 					<Add directory="C:/SFML-2.3.2/extlibs" />
