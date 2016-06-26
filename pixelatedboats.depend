@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1466964457 source:c:\code\cpp\pixelatedboats\main.cpp
+1466972215 source:c:\code\cpp\pixelatedboats\main.cpp
 	<SFML/Graphics.hpp>
 	"TestGame.h"
 	"BaseGame.h"
@@ -385,7 +385,7 @@
 	<string>
 	<vector>
 
-1466964457 source:c:\code\cpp\pixelatedboats\engine\basegame.cpp
+1466972371 source:c:\code\cpp\pixelatedboats\engine\basegame.cpp
 	"EGraphics.h"
 	"BaseGame.h"
 
@@ -497,7 +497,7 @@
 	"EGraphics.h"
 	"GameState.h"
 
-1466964457 c:\code\cpp\pixelatedboats\engine\gamestate.h
+1466972117 c:\code\cpp\pixelatedboats\engine\gamestate.h
 	<vector>
 	"GameObject.h"
 
@@ -505,22 +505,23 @@
 	<SFML/Graphics.hpp>
 	"BaseGame.h"
 
-1466964457 source:c:\code\cpp\pixelatedboats\src\playership.cpp
+1466970753 source:c:\code\cpp\pixelatedboats\src\playership.cpp
 	"PlayerShip.h"
 	"TextureList.h"
+	<math.h>
 
-1466964457 c:\code\cpp\pixelatedboats\include\playership.h
+1466970753 c:\code\cpp\pixelatedboats\include\playership.h
 	<SFML/Graphics.hpp>
 	"GameState.h"
 	"GameObject.h"
 
-1466964457 c:\code\cpp\pixelatedboats\include\texturelist.h
+1466970753 c:\code\cpp\pixelatedboats\include\texturelist.h
 	<SFML/Graphics.hpp>
 	<array>
 	<map>
 	<string>
 
-1466964504 source:c:\code\cpp\pixelatedboats\src\texturelist.cpp
+1466970753 source:c:\code\cpp\pixelatedboats\src\texturelist.cpp
 	"TextureList.h"
 	<iostream>
 

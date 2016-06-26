@@ -11,5 +11,7 @@ sf::RenderWindow *BaseGame::getWindow() {
 }
 
 void BaseGame::changeState(GameState *state) {
+    if (currentState != NULL) currentState->unload();
     currentState = state;
+    currentState->load();
 }

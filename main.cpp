@@ -12,6 +12,9 @@ public:
         view = game->getWindow()->getDefaultView();
     }
 
+    void load() {}
+    void unload() {}
+
     sf::View view;
     PlayerShip* player;
 

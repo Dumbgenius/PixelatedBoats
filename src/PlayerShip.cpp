@@ -5,17 +5,8 @@
 const float PI = 3.14159265;
 
 PlayerShip::PlayerShip(GameState* gameState) {
-    p_x = 0;
-    p_y = 0;
-    p_rotation = 0;
-    p_speed = 3;
-    p_rotateSpeed = 2;
-    textureList.getTexture(TextureID::shipPlayer)->setSmooth(true);
-    p_sprite.setTexture(*textureList.getTexture(TextureID::shipPlayer));
-    p_sprite.setPosition(p_x, p_y);
-    p_sprite.setRotation(p_rotation);
-    p_sprite.setOrigin(64,64);
-    gameState->objectsList.insert(gameState->objectsList.end(), this);
+    // Call other constructor, save time
+    PlayerShip(gameState, 0, 0);
 }
 
 PlayerShip::PlayerShip(GameState* gameState, float x, float y) {
@@ -54,6 +45,7 @@ void PlayerShip::rotate(float degrees) {
 }
 
 void PlayerShip::update() {
+    // This needs to be done based on time since last frame
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         rotate(-p_rotateSpeed);
     }
