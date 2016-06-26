@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "../engine/BaseGame.hpp"
+#include "BaseGame.h"
 
 class TestGame : public BaseGame {
 public:

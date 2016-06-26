@@ -1,4 +1,4 @@
-#include "EGraphics.hpp"
+#include "EGraphics.h"
 
 EGraphics::EGraphics(int wWidth, int wHeight) {
     wind = new sf::RenderWindow(sf::VideoMode(wWidth, wHeight), "SFML Engine Test", sf::Style::Titlebar | sf::Style::Close);

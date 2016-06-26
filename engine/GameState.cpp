@@ -1,5 +1,5 @@
-#include "BaseGame.hpp"
-#include "GameState.hpp"
+#include "BaseGame.h"
+#include "GameState.h"
 
 GameState::GameState(BaseGame *g) {
     game = g;

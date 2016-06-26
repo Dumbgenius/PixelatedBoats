@@ -413,9 +413,9 @@
 	"../engine/BaseGame.hpp"
 	"TestGame.hpp"
 
-1466956740 source:/hdd/jacob/Documents/dev/PixelatedBoats/engine/BaseGame.cpp
-	"EGraphics.hpp"
-	"BaseGame.hpp"
+1466959166 source:/hdd/jacob/Documents/dev/PixelatedBoats/engine/BaseGame.cpp
+	"EGraphics.h"
+	"BaseGame.h"
 
 1466956740 /hdd/jacob/Documents/dev/PixelatedBoats/engine/EGraphics.hpp
 	<SFML/Graphics.hpp>
@@ -428,24 +428,55 @@
 1466956740 /hdd/jacob/Documents/dev/PixelatedBoats/engine/GameState.hpp
 	"BaseGame.hpp"
 
-1466956740 source:/hdd/jacob/Documents/dev/PixelatedBoats/engine/EGraphics.cpp
-	"EGraphics.hpp"
+1466959178 source:/hdd/jacob/Documents/dev/PixelatedBoats/engine/EGraphics.cpp
+	"EGraphics.h"
 
-1466956740 source:/hdd/jacob/Documents/dev/PixelatedBoats/engine/GameState.cpp
-	"BaseGame.hpp"
-	"GameState.hpp"
+1466959183 source:/hdd/jacob/Documents/dev/PixelatedBoats/engine/GameState.cpp
+	"BaseGame.h"
+	"GameState.h"
 
-1466956740 source:/hdd/jacob/Documents/dev/PixelatedBoats/main.cpp
+1466960026 source:/hdd/jacob/Documents/dev/PixelatedBoats/main.cpp
 	<SFML/Graphics.hpp>
-	"src/TestGame.hpp"
-	"engine/BaseGame.hpp"
-	"engine/GameState.hpp"
+	"TestGame.h"
+	"BaseGame.h"
+	"GameState.h"
 
 1466956740 /hdd/jacob/Documents/dev/PixelatedBoats/src/TestGame.hpp
 	<SFML/Graphics.hpp>
 	"../engine/BaseGame.hpp"
 
-1466956740 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/TestGame.cpp
-	"../engine/BaseGame.hpp"
-	"TestGame.hpp"
+1466959643 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/TestGame.cpp
+	"BaseGame.h"
+	"TestGame.h"
+
+1466958347 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/PlayerShip.cpp
+	"PlayerShip.h"
+	"TextureList.h"
+
+1466960150 /hdd/jacob/Documents/dev/PixelatedBoats/include/PlayerShip.h
+	<SFML/Graphics.hpp>
+
+1466960461 /hdd/jacob/Documents/dev/PixelatedBoats/include/TextureList.h
+	<SFML/Graphics.hpp>
+	<array>
+	<map>
+	<string>
+
+1466956740 /hdd/jacob/Documents/dev/PixelatedBoats/engine/EGraphics.h
+	<SFML/Graphics.hpp>
+
+1466959175 /hdd/jacob/Documents/dev/PixelatedBoats/engine/BaseGame.h
+	<SFML/Graphics.hpp>
+	"EGraphics.h"
+	"GameState.h"
+
+1466959170 /hdd/jacob/Documents/dev/PixelatedBoats/engine/GameState.h
+	"BaseGame.h"
+
+1466959165 /hdd/jacob/Documents/dev/PixelatedBoats/include/TestGame.h
+	<SFML/Graphics.hpp>
+	"BaseGame.h"
+
+1466959960 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/TextureList.cpp
+	"TextureList.h"
 

@@ -98,6 +98,9 @@
 		<Compiler>
 			<Add option="-std=c++11" />
 			<Add option="-Wall" />
+			<Add directory="engine" />
+			<Add directory="include" />
+			<Add directory="src" />
 		</Compiler>
 		<Unit filename="engine/BaseGame.cpp" />
 		<Unit filename="engine/BaseGame.h" />
@@ -106,9 +109,7 @@
 		<Unit filename="engine/GameState.cpp" />
 		<Unit filename="engine/GameState.h" />
 		<Unit filename="include/PlayerShip.h" />
-		<Unit filename="include/TestGame.h">
-			<Option link="1" />
-		</Unit>
+		<Unit filename="include/TestGame.h" />
 		<Unit filename="include/TextureList.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/PlayerShip.cpp" />

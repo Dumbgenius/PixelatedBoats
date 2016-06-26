@@ -1,6 +1,6 @@
 #pragma once
 
-#include "BaseGame.hpp"
+#include "BaseGame.h"
 class BaseGame;
 
 class GameState {

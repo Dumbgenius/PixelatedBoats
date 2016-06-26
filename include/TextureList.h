@@ -1,3 +1,4 @@
+#pragma once
 #ifndef TEXTURELIST_H
 #define TEXTURELIST_H
 
@@ -10,9 +11,9 @@ enum TextureID {
     shipPlayer = 0
 };
 
-int TextureID_LENGTH = 1;
+extern int TextureID_LENGTH;
 
-std::map<int, std::string> textureLocationByID;
+extern std::map<int, std::string> textureLocationByID;
 
 class TextureList
 {
@@ -24,6 +25,6 @@ class TextureList
         std::array<bool, 1> texturesLoaded;
 };
 
-TextureList textureList; //this is supposed to be a constant texture list. hopefully.
+extern TextureList textureList; //this is supposed to be a constant texture list. hopefully.
 
 #endif // TEXTURELIST_H

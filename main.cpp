@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
-#include "src/TestGame.hpp"
-#include "engine/BaseGame.hpp"
-#include "engine/GameState.hpp"
+#include "TestGame.h"
+#include "BaseGame.h"
+#include "GameState.h"
 
 class TestState : GameState {
 public:

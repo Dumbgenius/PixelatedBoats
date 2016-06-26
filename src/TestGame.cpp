@@ -1,5 +1,5 @@
-#include "../engine/BaseGame.hpp"
-#include "TestGame.hpp"
+#include "BaseGame.h"
+#include "TestGame.h"
 
 TestGame::TestGame(int wWidth, int wHeight) : BaseGame(wWidth, wHeight) {}
 

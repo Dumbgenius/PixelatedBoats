@@ -1,5 +1,5 @@
-#include "EGraphics.hpp"
-#include "BaseGame.hpp"
+#include "EGraphics.h"
+#include "BaseGame.h"
 
 BaseGame::BaseGame(int wWidth, int wHeight) {
     gfx = new EGraphics(wWidth, wHeight);

@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "EGraphics.hpp"
-#include "GameState.hpp"
+#include "EGraphics.h"
+#include "GameState.h"
 
 class BaseGame {
 public:
