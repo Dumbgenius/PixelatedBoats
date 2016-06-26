@@ -10,13 +10,13 @@ class PlayerShip : sf::Drawable
         PlayerShip();
         PlayerShip(int x, int y);
         virtual ~PlayerShip();
-        void draw(sf::RenderTarget& target, sf::RenderStates states);
+        void draw(sf::RenderTarget& target, sf::RenderStates states) const;
         void update();
-        void move();
+        void move(int x, int y);
     private:
         int p_x;
         int p_y;
-        sf::Sprite sprite;
+        sf::Sprite p_sprite;
 };
 
 #endif // PLAYERSHIP_H

@@ -2,10 +2,13 @@
 #include "TestGame.h"
 #include "BaseGame.h"
 #include "GameState.h"
+#include "PlayerShip.h"
 
 class TestState : GameState {
 public:
-    TestState(BaseGame *g) : GameState(g) {}
+    TestState(BaseGame *g) : GameState(g) {
+        PlayerShip *playerShip = new PlayerShip (100, 100);
+    }
     void update() {
         sf::RenderWindow *wind = game->getWindow();
         sf::Event ev;
