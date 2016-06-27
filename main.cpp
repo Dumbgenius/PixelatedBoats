@@ -20,14 +20,24 @@ int main() {
 
     sf::Clock gameClock;
     sf::Event ev;
+    bool hasFocus = true;
 
     while (wind->isOpen()) {
         while (wind->pollEvent(ev)) {
             if (ev.type == sf::Event::Closed) {
                 wind->close();
             }
+            else if (ev.type == sf::Event::LostFocus) {
+                hasFocus = false;
+            }
+            else if (ev.type == sf::Event::GainedFocus) {
+                hasFocus = true;
+            }
         }
-        game.update(gameClock.restart());
+
+        if (hasFocus) {
+            game.update(gameClock.restart());
+        }
         game.render();
     }
 
