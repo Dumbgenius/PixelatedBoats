@@ -6,6 +6,7 @@
 #include "PlayerShip.h"
 #include "GameState.h"
 #include "SailingState.h"
+
 int main() {
 
     TestGame game = TestGame(1000, 500);
