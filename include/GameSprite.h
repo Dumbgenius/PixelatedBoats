@@ -13,9 +13,9 @@ class GameSprite : public sf::Sprite
         GameSprite(TextureID textureID);
         ~GameSprite();
 
-        void setTexture(const sf::Texture& texture, bool resetRect = false);
         void setTexture(TextureID textureID, bool resetRect = false);
     private:
+        void setTexture(const sf::Texture& texture, bool resetRect = false);
         int currentTextureID;
 };
 

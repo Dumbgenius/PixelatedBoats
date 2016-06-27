@@ -13,7 +13,7 @@ void GameSprite::setTexture(const sf::Texture& texture, bool resetRect) {
 }
 
 void GameSprite::setTexture(TextureID textureID, bool resetRect) {
-    sf::Sprite::setTexture(*textureList.getTexture(textureID), resetRect);
+    setTexture(*textureList.getTexture(textureID), resetRect);
     currentTextureID = textureID;
 }
 

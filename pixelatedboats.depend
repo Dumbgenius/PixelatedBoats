@@ -456,7 +456,7 @@
 	"TestGame.h"
 	<SFML/Graphics.hpp>
 
-1467045599 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/PlayerShip.cpp
+1467056084 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/PlayerShip.cpp
 	"PlayerShip.h"
 	"TextureList.h"
 	<math.h>
@@ -550,7 +550,7 @@
 1467053647 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/SailingState.cpp
 	"SailingState.h"
 
-1467056243 /hdd/jacob/Documents/dev/PixelatedBoats/include/GameSprite.h
+1467056597 /hdd/jacob/Documents/dev/PixelatedBoats/include/GameSprite.h
 	<SFML/Graphics.hpp>
 	"TextureList.h"
 
