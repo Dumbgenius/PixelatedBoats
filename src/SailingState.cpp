@@ -15,15 +15,6 @@ void SailingState::unload() {
 }
 
 void SailingState::update(sf::Time elapsed) {
-    sf::RenderWindow *wind = game->getWindow();
-    sf::Event ev;
-
-    while (wind->pollEvent(ev)) {
-        if (ev.type == sf::Event::Closed) {
-            wind->close();
-        }
-    }
-
     for (unsigned int i=0; i<objectsList.size(); i++) {
         objectsList[i]->update(elapsed);
     }

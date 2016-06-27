@@ -19,7 +19,14 @@ int main() {
     wind->setFramerateLimit(60);
 
     sf::Clock gameClock;
+    sf::Event ev;
+
     while (wind->isOpen()) {
+        while (wind->pollEvent(ev)) {
+            if (ev.type == sf::Event::Closed) {
+                wind->close();
+            }
+        }
         game.update(gameClock.restart());
         game.render();
     }
