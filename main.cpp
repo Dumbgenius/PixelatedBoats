@@ -37,9 +37,9 @@ public:
 
     void render() {
         sf::RenderWindow *wind = game->getWindow();
+        view.setCenter(player->getPosition());
         wind->setView(view);
         wind->clear();
-        view.setCenter(player->getPosition());
         for (unsigned int i=0; i<objectsList.size(); i++) {
             wind->draw(*objectsList[i]);
         }

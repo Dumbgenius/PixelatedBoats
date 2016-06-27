@@ -65,7 +65,7 @@ void PlayerShip::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 }
 
 sf::Vector2f PlayerShip::getPosition() {
-    return sf::Vector2f (p_x, p_y);
+    return p_sprite.getPosition();
 }
 
 
