@@ -437,13 +437,15 @@
 	"BaseGame.h"
 	"GameState.h"
 
-1467045569 source:/hdd/jacob/Documents/dev/PixelatedBoats/main.cpp
+1467050839 source:/hdd/jacob/Documents/dev/PixelatedBoats/main.cpp
 	<SFML/Graphics.hpp>
+	<iostream>
 	"TestGame.h"
 	"BaseGame.h"
 	"GameState.h"
 	"PlayerShip.h"
-	<iostream>
+	"GameState.h"
+	"SailingState.h"
 
 1466956740 /hdd/jacob/Documents/dev/PixelatedBoats/src/TestGame.hpp
 	<SFML/Graphics.hpp>
@@ -487,7 +489,7 @@
 	"BaseGame.h"
 	<SFML/Graphics.hpp>
 
-1467043284 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/TextureList.cpp
+1467047511 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/TextureList.cpp
 	"TextureList.h"
 	<iostream>
 
@@ -538,4 +540,12 @@
 
 1466964457 source:c:\code\cpp\pixelatedboats\src\gameobject.cpp
 	"GameObject.h"
+
+1467050909 /hdd/jacob/Documents/dev/PixelatedBoats/include/SailingState.h
+	"GameState.h"
+	"PlayerShip.h"
+	"BaseGame.h"
+
+1467050911 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/SailingState.cpp
+	"SailingState.h"
 
