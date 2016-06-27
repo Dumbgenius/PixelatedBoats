@@ -12,16 +12,24 @@ enum TextureID {
     sea1
 };
 
-extern std::map<int, std::string> textureLocationByID;
+struct TextureItem {
+    sf::Texture texture;
+    bool isLoaded;
+    std::string path;
+    TextureItem(std::string texturePath) {
+        texture = sf::Texture();
+        isLoaded = false;
+        path = texturePath;
+    }
+};
 
 class TextureList
 {
     public:
         TextureList();
-        sf::Texture* getTexture(TextureID textureID);
+        sf::Texture* getTexture(int textureID);
     private:
-        std::array<sf::Texture, 1> textures;
-        std::array<bool, 1> texturesLoaded;
+        std::vector<TextureItem> textures;
 };
 
 extern TextureList textureList; //this is supposed to be a constant texture list. hopefully.

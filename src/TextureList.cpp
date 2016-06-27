@@ -1,25 +1,27 @@
 #include "TextureList.h"
 #include <iostream>
 
-std::map<int, std::string> textureLocationByID;
 
 TextureList textureList;
 
 TextureList::TextureList()
 {
-    textureLocationByID[TextureID::shipPlayer] = "img/shipPlayer.png";
-    textureLocationByID[TextureID::sea1] = "img/sea1.png";
+    textures.push_back(TextureItem("img/shipPlayer.png"));
+    textures.push_back(TextureItem("img/sea1.png"));
 }
 
-sf::Texture* TextureList::getTexture(TextureID textureID) {
-    if (!texturesLoaded[textureID]) {
-        bool loadSucceeded = textureList.textures[textureID].loadFromFile(textureLocationByID[textureID]);
+sf::Texture* TextureList::getTexture(int textureID) {
+    if (!textures[textureID].isLoaded) {
+        std::cout<<"Loading texture'"<<textures[textureID].path<<"'... ";
+        bool loadSucceeded = textures[textureID].texture.loadFromFile(textures[textureID].path);
         if (!loadSucceeded) {
-            throw "Texture" + textureLocationByID[textureID] + "failed to load.";
+            std::cout<<"Texture failed to load.";
+            throw "Texture" + textures[textureID].path + "failed to load.";
         } else {
-            std::cout<<"Successfully loaded texture\""<<textureLocationByID[textureID]<<"\".";
+            std::cout<<"Success.\n";
         }
+        textures[textureID].isLoaded = true;
     }
 
-    return &(textureList.textures[textureID]);
+    return &(textures[textureID].texture);
 }
