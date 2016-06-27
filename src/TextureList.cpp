@@ -1,8 +1,6 @@
 #include "TextureList.h"
 #include <iostream>
 
-int TextureID_LENGTH = 1;
-
 std::map<int, std::string> textureLocationByID;
 
 TextureList textureList;

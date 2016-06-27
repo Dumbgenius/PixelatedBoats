@@ -8,10 +8,9 @@
 #include <string>
 
 enum TextureID {
-    shipPlayer = 0
+    shipPlayer = 0,
+    sea1
 };
-
-extern int TextureID_LENGTH;
 
 extern std::map<int, std::string> textureLocationByID;
 
