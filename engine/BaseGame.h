@@ -7,7 +7,7 @@ class BaseGame {
 public:
     BaseGame(int wWidth, int wHeight);
 
-    virtual void update() = 0;
+    virtual void update(sf::Time elapsed) = 0;
     virtual void render() = 0;
 
     sf::RenderWindow *getWindow();

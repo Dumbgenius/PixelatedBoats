@@ -13,8 +13,8 @@ PlayerShip::PlayerShip(GameState* gameState, float x, float y) {
     p_x = x;
     p_y = y;
     p_rotation = 0;
-    p_speed = 3;
-    p_rotateSpeed = 2;
+    p_speed = 60; //in pixels per second
+    p_rotateSpeed = 30; //in degrees per second
     textureList.getTexture(TextureID::shipPlayer)->setSmooth(true);
     p_sprite.setTexture(*textureList.getTexture(TextureID::shipPlayer));
     p_sprite.setPosition(p_x, p_y);
@@ -44,19 +44,19 @@ void PlayerShip::rotate(float degrees) {
     p_rotation = p_sprite.getRotation();
 }
 
-void PlayerShip::update() {
+void PlayerShip::update(sf::Time elapsed) {
     // This needs to be done based on time since last frame
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        rotate(-p_rotateSpeed);
+        rotate(-p_rotateSpeed * elapsed.asSeconds());
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        rotate(p_rotateSpeed);
+        rotate(p_rotateSpeed * elapsed.asSeconds());
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        move(p_speed);
+        move(p_speed * elapsed.asSeconds());
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        move(-p_speed);
+        move(-p_speed * elapsed.asSeconds());
     }
 }
 

@@ -13,7 +13,7 @@ class PlayerShip : GameObject
         PlayerShip(GameState* gameState, float x, float y);
         virtual ~PlayerShip();
         void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-        void update();
+        void update(sf::Time elapsed);
         void move(float x, float y);
         void move(float distance);
         void rotate(float degrees);

@@ -7,18 +7,20 @@
 
 class TestState : GameState {
 public:
-    TestState(BaseGame *g) : GameState(g) {
+    TestState(BaseGame *g) : GameState(g) {}
+
+    void load(GameState *prevState) {
         player = new PlayerShip (this, 100, 100);
         view = game->getWindow()->getDefaultView();
     }
-
-    void load() {}
-    void unload() {}
+    void unload() {
+        delete player;
+    }
 
     sf::View view;
     PlayerShip* player;
 
-    void update() {
+    void update(sf::Time elapsed) {
         sf::RenderWindow *wind = game->getWindow();
         sf::Event ev;
 
@@ -29,15 +31,15 @@ public:
         }
 
         for (unsigned int i=0; i<objectsList.size(); i++) {
-            objectsList[i]->update();
+            objectsList[i]->update(elapsed);
         }
     }
 
     void render() {
         sf::RenderWindow *wind = game->getWindow();
         wind->setView(view);
-        view.setCenter(player->getPosition());
         wind->clear();
+        view.setCenter(player->getPosition());
         for (unsigned int i=0; i<objectsList.size(); i++) {
             wind->draw(*objectsList[i]);
         }
@@ -56,8 +58,9 @@ int main() {
 
     wind->setFramerateLimit(60);
 
+    sf::Clock gameClock;
     while (wind->isOpen()) {
-        tGame.update();
+        tGame.update(gameClock.restart());
         tGame.render();
     }
 

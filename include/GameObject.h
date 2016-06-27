@@ -8,7 +8,7 @@ class GameObject : public sf::Drawable
 {
     public:
         GameObject();
-        virtual void update() = 0;
+        virtual void update(sf::Time elapsed) = 0;
 };
 
 #endif // GAMEOBJECT_H
