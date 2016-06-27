@@ -16,7 +16,7 @@ PlayerShip::PlayerShip(GameState* gameState, float x, float y) {
     p_speed = 60; //in pixels per second
     p_rotateSpeed = 30; //in degrees per second
     textureList.getTexture(TextureID::shipPlayer)->setSmooth(true);
-    p_sprite.setTexture(*textureList.getTexture(TextureID::shipPlayer));
+    p_sprite.setTexture(TextureID::shipPlayer);
     p_sprite.setPosition(p_x, p_y);
     p_sprite.setRotation(p_rotation);
     p_sprite.setOrigin(64,64);

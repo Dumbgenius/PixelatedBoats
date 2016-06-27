@@ -25,3 +25,19 @@ sf::Texture* TextureList::getTexture(int textureID) {
 
     return &(textures[textureID].texture);
 }
+
+void TextureList::usingTexture(int textureID) {
+    textures[textureID].noUsing++;
+}
+
+void TextureList::notUsingTexture(int textureID) {
+    textures[textureID].noUsing--;
+    if (textures[textureID].noUsing == 0) {
+        unloadTexture(textureID);
+    }
+}
+
+void TextureList::unloadTexture(int textureID) {
+    textures[textureID].isLoaded = false;
+    textures[textureID].texture = sf::Texture();
+}

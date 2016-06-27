@@ -15,11 +15,13 @@ enum TextureID {
 struct TextureItem {
     sf::Texture texture;
     bool isLoaded;
+    int noUsing;
     std::string path;
     TextureItem(std::string texturePath) {
         texture = sf::Texture();
         isLoaded = false;
         path = texturePath;
+        noUsing = 0;
     }
 };
 
@@ -28,7 +30,10 @@ class TextureList
     public:
         TextureList();
         sf::Texture* getTexture(int textureID);
+        void usingTexture(int textureID); //call in constructors
+        void notUsingTexture(int textureID); //call in destructors
     private:
+        void unloadTexture(int textureID);
         std::vector<TextureItem> textures;
 };
 

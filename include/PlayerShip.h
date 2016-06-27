@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include "GameState.h"
 #include "GameObject.h"
+#include "GameSprite.h"
 
 class PlayerShip : GameObject
 {
@@ -24,7 +25,7 @@ class PlayerShip : GameObject
         float p_rotation;
         float p_speed;
         float p_rotateSpeed;
-        sf::Sprite p_sprite;
+        GameSprite p_sprite;
 };
 
 #endif // PLAYERSHIP_H
