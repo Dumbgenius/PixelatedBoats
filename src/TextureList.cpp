@@ -8,6 +8,7 @@ TextureList textureList;
 TextureList::TextureList()
 {
     textureLocationByID[TextureID::shipPlayer] = "img/shipPlayer.png";
+    textureLocationByID[TextureID::sea1] = "img/sea1.png";
 }
 
 sf::Texture* TextureList::getTexture(TextureID textureID) {
