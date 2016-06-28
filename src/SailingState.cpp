@@ -25,18 +25,19 @@ void SailingState::update(sf::Time elapsed) {
 void SailingState::render() {
         sf::RenderWindow *wind = game->getWindow();
         view.setCenter(player->getPosition());
-
-        std::stringstream debugString;
-        debugString << "X: " << player->getPosition().x << "\nY: " << player->getPosition().y;
-        sf::Text debugText (debugString.str(), font, 16);
-        debugText.setPosition((sf::Vector2f)wind->mapPixelToCoords(sf::Vector2i(10, 10), view));
-
-
         wind->setView(view);
         wind->clear();
+
         for (unsigned int i=0; i<objectsList.size(); i++) {
             wind->draw(*objectsList[i]);
         }
-        wind->draw(debugText);
+        if (DEBUG) {
+            std::stringstream debugString;
+            debugString << "X: " << player->getPosition().x << "\nY: " << player->getPosition().y;
+            sf::Text debugText (debugString.str(), font, 16);
+            debugText.setPosition((sf::Vector2f)wind->mapPixelToCoords(sf::Vector2i(10, 10), view));
+            wind->draw(debugText);
+        }
+
         wind->display();
     }
