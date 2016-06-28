@@ -6,8 +6,8 @@ TextureList textureList;
 
 TextureList::TextureList()
 {
-    textures.push_back(TextureItem("img/shipPlayer.png"));
-    textures.push_back(TextureItem("img/sea1.png"));
+    textures.push_back(TextureItem("resources/img/shipPlayer.png"));
+    textures.push_back(TextureItem("resources/img/sea1.png"));
 }
 
 sf::Texture* TextureList::getTexture(int textureID) {
