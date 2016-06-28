@@ -1,6 +1,7 @@
 #include "PlayerShip.h"
 #include "TextureList.h"
 #include <math.h>
+#include <iostream>
 
 const float PI = 3.14159265;
 
@@ -9,7 +10,7 @@ PlayerShip::PlayerShip(GameState* gameState) {
     PlayerShip(gameState, 0, 0);
 }
 
-PlayerShip::PlayerShip(GameState* gameState, float x, float y) {
+PlayerShip::PlayerShip(GameState* gameState, float x, float y) : GameObject(x, y, 0) {
     p_x = x;
     p_y = y;
     p_rotation = 0;
@@ -20,6 +21,7 @@ PlayerShip::PlayerShip(GameState* gameState, float x, float y) {
     p_sprite.setPosition(p_x, p_y);
     p_sprite.setRotation(p_rotation);
     p_sprite.setOrigin(64,64);
+    setRect(p_sprite.getGlobalBounds());
     gameState->objectsList.insert(gameState->objectsList.end(), this);
 }
 
@@ -67,5 +69,4 @@ void PlayerShip::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 sf::Vector2f PlayerShip::getPosition() {
     return p_sprite.getPosition();
 }
-
 
