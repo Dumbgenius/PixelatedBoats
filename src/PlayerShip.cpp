@@ -45,12 +45,19 @@ void PlayerShip::rotate(float degrees) {
 }
 
 void PlayerShip::update(sf::Time elapsed) {
-    // This needs to be done based on time since last frame
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        rotate(-p_rotateSpeed * elapsed.asSeconds());
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            rotate(p_rotateSpeed * elapsed.asSeconds());
+        } else {
+            rotate(-p_rotateSpeed * elapsed.asSeconds());
+        }
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        rotate(p_rotateSpeed * elapsed.asSeconds());
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            rotate(-p_rotateSpeed * elapsed.asSeconds());
+        } else {
+            rotate(p_rotateSpeed * elapsed.asSeconds());
+        }
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
         move(p_speed * elapsed.asSeconds());
