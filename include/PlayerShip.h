@@ -20,9 +20,6 @@ class PlayerShip : GameObject
         void rotate(float degrees);
         sf::Vector2f getPosition();
     private:
-        float p_x;
-        float p_y;
-        float p_rotation;
         float p_speed;
         float p_rotateSpeed;
         GameSprite p_sprite;

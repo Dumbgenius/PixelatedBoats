@@ -1,11 +1,13 @@
 # depslib dependency file v1.0
-1466972215 source:c:\code\cpp\pixelatedboats\main.cpp
+1467055260 source:c:\code\cpp\pixelatedboats\main.cpp
 	<SFML/Graphics.hpp>
+	<iostream>
 	"TestGame.h"
 	"BaseGame.h"
 	"GameState.h"
 	"PlayerShip.h"
-	<iostream>
+	"GameState.h"
+	"SailingState.h"
 
 1466804429 c:\sfml-2.3.2\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -385,7 +387,7 @@
 	<string>
 	<vector>
 
-1466972371 source:c:\code\cpp\pixelatedboats\engine\basegame.cpp
+1467054390 source:c:\code\cpp\pixelatedboats\engine\basegame.cpp
 	"EGraphics.h"
 	"BaseGame.h"
 
@@ -400,10 +402,10 @@
 1466880885 c:\code\cpp\pixelatedboats\engine\gamestate.hpp
 	"BaseGame.hpp"
 
-1466964457 source:c:\code\cpp\pixelatedboats\engine\egraphics.cpp
+1467054390 source:c:\code\cpp\pixelatedboats\engine\egraphics.cpp
 	"EGraphics.h"
 
-1466964457 source:c:\code\cpp\pixelatedboats\engine\gamestate.cpp
+1467054390 source:c:\code\cpp\pixelatedboats\engine\gamestate.cpp
 	"BaseGame.h"
 	"GameState.h"
 
@@ -411,9 +413,10 @@
 	<SFML/Graphics.hpp>
 	"../engine/BaseGame.hpp"
 
-1466964457 source:c:\code\cpp\pixelatedboats\src\testgame.cpp
+1467054390 source:c:\code\cpp\pixelatedboats\src\testgame.cpp
 	"BaseGame.h"
 	"TestGame.h"
+	<SFML/Graphics.hpp>
 
 1467044119 source:/hdd/jacob/Documents/dev/PixelatedBoats/engine/BaseGame.cpp
 	"EGraphics.h"
@@ -494,39 +497,41 @@
 	"TextureList.h"
 	<iostream>
 
-1466964457 c:\code\cpp\pixelatedboats\engine\egraphics.h
+1467054390 c:\code\cpp\pixelatedboats\engine\egraphics.h
 	<SFML/Graphics.hpp>
 
-1466964457 c:\code\cpp\pixelatedboats\engine\basegame.h
+1467054390 c:\code\cpp\pixelatedboats\engine\basegame.h
 	<SFML/Graphics.hpp>
 	"EGraphics.h"
 	"GameState.h"
 
-1466972117 c:\code\cpp\pixelatedboats\engine\gamestate.h
+1467054390 c:\code\cpp\pixelatedboats\engine\gamestate.h
 	<vector>
+	<SFML/Graphics.hpp>
 	"GameObject.h"
 
-1466964457 c:\code\cpp\pixelatedboats\include\testgame.h
-	<SFML/Graphics.hpp>
+1467054390 c:\code\cpp\pixelatedboats\include\testgame.h
 	"BaseGame.h"
+	<SFML/Graphics.hpp>
 
-1466970753 source:c:\code\cpp\pixelatedboats\src\playership.cpp
+1467140407 source:c:\code\cpp\pixelatedboats\src\playership.cpp
 	"PlayerShip.h"
 	"TextureList.h"
 	<math.h>
 
-1466970753 c:\code\cpp\pixelatedboats\include\playership.h
+1467140624 c:\code\cpp\pixelatedboats\include\playership.h
 	<SFML/Graphics.hpp>
 	"GameState.h"
 	"GameObject.h"
+	"GameSprite.h"
 
-1466970753 c:\code\cpp\pixelatedboats\include\texturelist.h
+1467140407 c:\code\cpp\pixelatedboats\include\texturelist.h
 	<SFML/Graphics.hpp>
 	<array>
 	<map>
 	<string>
 
-1466970753 source:c:\code\cpp\pixelatedboats\src\texturelist.cpp
+1467140407 source:c:\code\cpp\pixelatedboats\src\texturelist.cpp
 	"TextureList.h"
 	<iostream>
 
@@ -536,10 +541,10 @@
 1466963924 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/GameObject.cpp
 	"GameObject.h"
 
-1466964457 c:\code\cpp\pixelatedboats\include\gameobject.h
+1467140713 c:\code\cpp\pixelatedboats\include\gameobject.h
 	<SFML/Graphics.hpp>
 
-1466964457 source:c:\code\cpp\pixelatedboats\src\gameobject.cpp
+1467054390 source:c:\code\cpp\pixelatedboats\src\gameobject.cpp
 	"GameObject.h"
 
 1467050909 /hdd/jacob/Documents/dev/PixelatedBoats/include/SailingState.h
@@ -556,4 +561,19 @@
 
 1467056582 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/GameSprite.cpp
 	"GameSprite.h"
+
+1467140407 c:\code\cpp\pixelatedboats\include\gamesprite.h
+	<SFML/Graphics.hpp>
+	"TextureList.h"
+
+1467054452 c:\code\cpp\pixelatedboats\include\sailingstate.h
+	"GameState.h"
+	"PlayerShip.h"
+	"BaseGame.h"
+
+1467140407 source:c:\code\cpp\pixelatedboats\src\gamesprite.cpp
+	"GameSprite.h"
+
+1467054390 source:c:\code\cpp\pixelatedboats\src\sailingstate.cpp
+	"SailingState.h"
 
