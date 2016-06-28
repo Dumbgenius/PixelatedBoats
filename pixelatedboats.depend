@@ -541,10 +541,11 @@
 1467141530 source:/hdd/jacob/Documents/dev/PixelatedBoats/src/GameObject.cpp
 	"GameObject.h"
 
-1467140713 c:\code\cpp\pixelatedboats\include\gameobject.h
+1467141707 c:\code\cpp\pixelatedboats\include\gameobject.h
 	<SFML/Graphics.hpp>
+	<SFML/Graphics/Rect.hpp>
 
-1467054390 source:c:\code\cpp\pixelatedboats\src\gameobject.cpp
+1467141727 source:c:\code\cpp\pixelatedboats\src\gameobject.cpp
 	"GameObject.h"
 
 1467140420 /hdd/jacob/Documents/dev/PixelatedBoats/include/SailingState.h
