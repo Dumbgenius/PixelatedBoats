@@ -12,13 +12,13 @@ TextureList::TextureList()
 
 sf::Texture* TextureList::getTexture(int textureID) {
     if (!textures[textureID].isLoaded) {
-        std::cout<<"Loading texture'"<<textures[textureID].path<<"'... ";
+        if (DEBUG) {std::cout<<"Loading texture'"<<textures[textureID].path<<"'... ";}
         bool loadSucceeded = textures[textureID].texture.loadFromFile(textures[textureID].path);
         if (!loadSucceeded) {
-            std::cout<<"Texture failed to load.";
+            std::cout<<"Texture '"<<textures[textureID].path<<"' failed to load.";
             throw "Texture" + textures[textureID].path + "failed to load.";
         } else {
-            std::cout<<"Success.\n";
+            if (DEBUG) {std::cout<<"Success.\n";}
         }
         textures[textureID].isLoaded = true;
     }
